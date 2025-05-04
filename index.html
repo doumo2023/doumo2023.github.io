@@ -10,18 +10,178 @@
 </head>
 <body>
 <div id="outer">
-<header><div id="header-container"><div id="head-inner"><h1>EarthquakeTsunamiYomiage公開サイト</h1>
-<p class="description">ここではEarthquakeTsunamiYomiageの公開を行っています。</p></div></div>
+<header>
+  <div id="header-container">
+    <div id="head-inner">
+      <h1>EarthquakeTsunamiYomiage公開サイト</h1>
+      <p class="description">ここではEarthquakeTsunamiYomiageの公開を行っています。</p>
+    </div>
+  </div>
 </header>
 <div id="content-wrapper">
 <main>
 <div id="inner">
-<h2>記事ページ見出し・大</h2>
-<p>文章あれこれ</p>
-<h3>記事ページ見出し・中</h3>
-<p>文章あれこれ</p>
-<h4>記事ページ見出し・小</h4>
-<p>文章あれこれ</p>
+<h2>EarthquakeTsunamiYomiage</h2>
+<p><strong>地震情報・津波情報・緊急地震速報を自動で読み上げるソフトウェアです。</strong></p>
+<img src="https://github.com/user-attachments/assets/00448285-88c7-423d-b45e-5356f3638052" alt="トップ画面">
+
+<hr>
+
+<h3>🔧 主な機能</h3>
+<table>
+<thead>
+<tr>
+<th>画面</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://github.com/user-attachments/assets/00448285-88c7-423d-b45e-5356f3638052" alt="トップ画面"></td>
+<td>緊急地震速報・津波情報などを一括表示。</td>
+</tr>
+<tr>
+<td><img src="https://github.com/user-attachments/assets/8b11e589-54be-408b-8033-84d9c45c062e" alt="音声設定"></td>
+<td>音声ごとのON/OFF、棒読みちゃんの声・音量・速度・音程の変更が可能。</td>
+</tr>
+<tr>
+<td><img src="https://github.com/user-attachments/assets/2eac4a47-ed66-4f77-8507-a4a77e4fcb5f1" alt="棒読みちゃん設定"></td>
+<td>棒読みちゃんとの連携設定画面。ポート番号の変更が可能。</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h3>⚙️ 設定について</h3>
+<h4>棒読みちゃん連携設定</h4>
+<ol>
+<li>棒読みちゃんの「アプリケーション連携」→「HTTP連携」→「ポート番号」を変更</li>
+<li>「ローカルHTTPサーバー機能を使う」が <code>False</code> になっていたら <code>True</code> に変更</li>
+<li>設定後は <strong>棒読みちゃんを再起動</strong> してください</li>
+</ol>
+
+<hr>
+
+<h3>🧾 config.jsonについて</h3>
+<p><code>config.json</code> を編集することで以下の設定が可能です。<code>""</code> で囲まれた文字列のみを変更してください。</p>
+<ul>
+<li>音声ファイルのフォルダパス</li>
+<li>各種音声ファイル名</li>
+<li>津波メッセージの文言</li>
+<li>地震情報のラベル名（例：遠地地震情報）</li>
+<li>WebSocketの受信先URL（P2P/Wolfx）</li>
+</ul>
+
+<hr>
+
+<h3>🔊 音声ファイルの名前対応表</h3>
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>ファイル名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>緊急地震速報（警報）</td>
+<td><code>Eewwarning.mp3</code></td>
+</tr>
+<tr>
+<td>緊急地震速報（予報）</td>
+<td><code>Eewforecast.mp3</code></td>
+</tr>
+<tr>
+<td>津波情報発表</td>
+<td><code>Tsunami.mp3</code></td>
+</tr>
+<tr>
+<td>津波観測に関する情報発表</td>
+<td><code>Observation.mp3</code></td>
+</tr>
+<tr>
+<td>津波情報解除</td>
+<td><code>Tsunamicancel.mp3</code></td>
+</tr>
+<tr>
+<td>震度速報</td>
+<td><code>ScalePrompt.mp3</code></td>
+</tr>
+<tr>
+<td>震源に関する情報</td>
+<td><code>Destination.mp3</code></td>
+</tr>
+<tr>
+<td>震度・震源に関する情報</td>
+<td><code>ScaleAndDestination.mp3</code></td>
+</tr>
+<tr>
+<td>各地の震度に関する情報</td>
+<td><code>DetailScale.mp3</code></td>
+</tr>
+<tr>
+<td>遠地地震情報</td>
+<td><code>Foreign.mp3</code></td>
+</tr>
+<tr>
+<td>長周期地震動に関する情報</td>
+<td><code>SeismicWarning.mp3</code></td>
+</tr>
+<tr>
+<td>沖合の津波観測に関する情報</td>
+<td><code>OffshoreTsunami.mp3</code></td>
+</tr>
+<tr>
+<td>南海トラフ地震臨時情報</td>
+<td><code>Nankai.mp3</code></td>
+</tr>
+<tr>
+<td>北海道三陸沖後発地震注意情報</td>
+<td><code>Sanriku.mp3</code></td>
+</tr>
+</tbody>
+</table>
+<p>※ <code>Sounds</code> フォルダには初期状態では無音ファイルが入っています。必要に応じて音声ファイルを差し替えてください。</p>
+
+<hr>
+
+<h3>📡 受信できる情報一覧</h3>
+<ul>
+<li>緊急地震速報（予報・警報）</li>
+<li>震度速報</li>
+<li>震源情報</li>
+<li>震度・震源に関する情報</li>
+<li>各地の震度に関する情報</li>
+<li>長周期地震動に関する情報</li>
+<li>遠地地震に関する情報</li>
+<li>津波警報／注意報／大津波警報</li>
+<li>津波観測情報</li>
+<li>沖合の津波観測に関する情報</li>
+<li>南海トラフ地震臨時情報</li>
+<li>北海道三陸沖後発地震注意情報</li>
+</ul>
+
+<hr>
+
+<h3>📢 配信での利用について</h3>
+<ul>
+<li>クレジット表記は <strong>不要</strong> です。ご自由にご利用ください。</li>
+<li>ただし、書いていただけると使用状況が分かって作者が嬉しく思います。</li>
+</ul>
+
+<hr>
+
+<h3>🔗 データ取得元</h3>
+<ul>
+<li><a href="https://www.p2pquake.net/develop/json_api_v2/#/">P2P地震情報 API v2</a></li>
+<li><a href="https://wolfx.jp/apidoc">Wolfx API</a></li>
+</ul>
+
+<hr>
+
+<h3>💬 不具合・要望</h3>
+<p>Issue または Pull Request にてご報告ください。</p>
 </div>
 </main>
 <aside>
@@ -37,5 +197,6 @@
 </aside>
 </div>
 <footer>© 2025 doumo</footer>
-</div></body>
+</div>
+</body>
 </html>
