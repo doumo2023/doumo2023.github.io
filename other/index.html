@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>EarthquakeTsunamiYomiage よくある質問</title>
+<meta name="keywords" content="EarthquakeTsunamiYomiage, FAQ, 地震速報, 津波, 棒読みちゃん, 設定トラブル, 音声読み上げ">
+<meta name="description" content="EarthquakeTsunamiYomiageのよくある質問（FAQ）とその解決策をまとめたページです。">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="article.css">
+</head>
+<body>
+<div id="outer">
+<header>
+  <div id="head-inner">
+    <div id="header-container">
+      <div id="logo"><a href="/">EarthquakeTsunamiYomiage 公開ページ</a></div>
+      <p class="description">EarthquakeTsunamiYomiageのよくある質問（FAQ）</p>
+    </div>
+  </div>
+</header>
+
+<div id="content-wrapper">
+<main>
+<div id="inner">
+  <h1>よくある質問（FAQ）</h1>
+
+  <h2>Q1. 音声が再生されません</h2>
+  <p>A1. 以下を確認してください：</p>
+  <ul>
+    <li>config.jsonの音声ファイル名・パスが正しいか</li>
+    <li>音声ファイルが「Sounds」フォルダ内に配置されているか</li>
+  </ul>
+
+  <h2>Q2. 棒読みちゃんが反応しません</h2>
+  <p>A2. 以下を確認してください：</p>
+  <ul>
+    <li>棒読みちゃん側で「ローカルHTTPサーバー機能」が有効か</li>
+    <li>ポート番号がconfig.jsonと一致しているか</li>
+    <li>棒読みちゃんを設定変更後に再起動したか</li>
+  </ul>
+
+  <h2>Q3. ソフトが起動しません</h2>
+  <p>A3. Windows Defender等のウイルス対策ソフトではじかれているかもしれません。ソフト自体を許可するようにしてください。</p>
+
+  <h2>Q4. 津波や地震速報が届かない</h2>
+  <p>A4. 使用しているAPIのURL（P2Pquake/Wolfx）が正しくconfig.jsonに設定されているかを確認してください。また、インターネット接続の状態も確認してください。</p>
+
+  <h2>Q5. 配信で使用してもいいですか？</h2>
+  <p>A5. 商用・非商用問わず利用可能です。クレジット表記は不要ですが、書いていただけると開発者が喜びます。</p>
+</div>
+</main>
+
+<aside>
+<div id="middle-inner">
+  <div class="side-title">menu</div>
+  <div class="side">
+    <ul>
+      <li><a href="index.html">トップページ</a></li>
+      <li><a href="install.html">インストール手順</a></li>
+      <li><a href="config.html">設定ガイド</a></li>
+      <li><a href="usage.html">使用例と活用法</a></li>
+    </ul>
+  </div>
+</div>
+</aside>
+
+</div>
+<footer>© 2025 EarthquakeTsunamiYomiage</footer>
+</div>
+</body>
+</html>
